@@ -7,8 +7,10 @@ import random
 
 def quick_sort(array, fst, lst):
 
-    if fst >= lst:
-        return None
+    if fst >= lst: #массив отсортирован
+        #возвращаем середину массива
+        mid = (len(array) - 1) // 2
+        return array[mid]
 
     pivot = array[random.randint(fst, lst)]
     i, j = fst, lst
